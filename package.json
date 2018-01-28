@@ -1,0 +1,25 @@
+{
+  "name": "graphqtest",
+  "version": "1.0.0",
+  "description": "testing graphql",
+  "main": "index.js",
+  "dependencies": {
+    "express": "^4.16.2",
+    "express-graphql": "^0.6.11",
+    "graphql": "^0.12.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Eddinos/GraphQL-Test.git"
+  },
+  "author": "Eddine Djerboua",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Eddinos/GraphQL-Test/issues"
+  },
+  "homepage": "https://github.com/Eddinos/GraphQL-Test#readme"
+}

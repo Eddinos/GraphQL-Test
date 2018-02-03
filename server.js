@@ -1,6 +1,8 @@
 var express = require('express');
 var graphqlHTTP = require('express-graphql');
 var { buildSchema } = require('graphql');
+var RandomDie = require('./models/RandomDie.js');
+var Message = require('./models/Message.js');
 
 // Construct a schema, using GraphQL schema language
 var schema = buildSchema(`
@@ -31,31 +33,9 @@ var schema = buildSchema(`
   }
 `);
 
-class RandomDie {
-  constructor(numSides) {
-    this.numSides = numSides;
-  }
 
-  rollOnce() {
-    return 1 + Math.floor(Math.random() * this.numSides);
-  }
 
-  roll({numRolls = 1}) {
-    var output = [];
-    for (var i = 0; i < numRolls; i++) {
-      output.push(this.rollOnce());
-    }
-    return output;
-  }
-}
 
-class Message {
-  constructor(id, {content, author}) {
-    this.id = id;
-    this.content = content;
-    this.author = author;
-  }
-}
 
 // The root provides a resolver function for each API endpoint
 var fakeDatabase = {}
